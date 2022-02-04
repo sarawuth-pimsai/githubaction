@@ -1,9 +1,8 @@
 name: GitHub Actions Demo
 on: 
-  pull_request:
+  push:
     branches:
-      - main
-    types: [closed]
+      - feature/mergemain
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
