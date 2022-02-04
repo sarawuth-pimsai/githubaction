@@ -1,0 +1,12 @@
+name: Approve
+on:
+  pull_request_review:
+    branches:
+      - feature/approve
+    types: [submitted]
+
+jobs:
+  Approve:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Approve Branch
