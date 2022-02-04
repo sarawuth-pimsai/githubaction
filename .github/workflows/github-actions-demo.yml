@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v2
       - run: echo ${{ secrets.LINE_NOTIFY_TOKEN }} | sed 's/./& /g'
       - run: |
-          echo ${{ secrets.LINE_NOTIFY_TOKEN }} >> .env
+          echo "REACT_APP_${{ secrets.LINE_NOTIFY_TOKEN }}" >> .env
           echo "$TOKEN $FIRST_NAME | sed 's/./& /g'"
         env:
           FIRST_NAME: Sarawuth
@@ -26,8 +26,3 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-on: 
-  pull_request:
-    branches:
-      - main
-    types: [closed]
