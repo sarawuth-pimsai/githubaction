@@ -26,7 +26,7 @@ jobs:
       - name: Dotenv Action
         id: dotenv
         uses: falti/dotenv-action@v0.2.7
-      - run: echo ${{ steps.dotenv.outputs.REACT_APP_URL }}
+      - run: echo ${{ steps.dotenv.outputs.REACT_APP_LINE_NOTIFY_TOKEN }}
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: List files in the repository
