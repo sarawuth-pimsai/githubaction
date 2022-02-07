@@ -12,12 +12,12 @@ jobs:
     steps:
       - name: Check out github
         uses: actions/checkout@v2
-        id: check-out-github
+      - id: check-out-github
         run: echo "::set-output name=test::hello"
   build:
     runs-on: ubuntu-latest
     needs: check-out-github
     steps:
       - name: Hello
-        run: echo ${{needs.check-out-github.outputs.output1}} ${{needs.check-out-github.outputs.output2}}
+        run: echo ${{github.event.action}} ${{needs.check-out-github.outputs.output2}}
     
