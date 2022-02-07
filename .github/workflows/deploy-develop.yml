@@ -1,0 +1,18 @@
+name: Deploy develop
+on:
+  push:
+    types:
+      - closed
+    branches:
+      - main
+      - develop
+      - gitactionspr
+jobs:
+  check-out-github:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out github
+        uses: actions/checkout@v2
+  build:
+    needs: check-out-github
+    
