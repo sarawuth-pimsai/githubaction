@@ -17,5 +17,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: check-out-github
     steps:
-      - run: echo ${{needs.check-out-github.outputs.output1}} ${{needs.check-out-github.outputs.output2}}
+      - name: Hello
+        run: echo ${{needs.check-out-github.outputs.output1}} ${{needs.check-out-github.outputs.output2}}
     
