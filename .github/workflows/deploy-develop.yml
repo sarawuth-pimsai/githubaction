@@ -6,7 +6,7 @@ on:
     branches:
       - main
       - develop
-      - gitactionspr
+      - test/gitactionspr
 jobs:
   check-out-github:
     runs-on: ubuntu-latest
