@@ -11,8 +11,8 @@ jobs:
       output2: ${{ steps.check-out-github.outputs.test }}
     steps:
       - name: Check out github
-      - id: check-out-github
         uses: actions/checkout@v2
+        id: check-out-github
         run: echo "::set-output name=test::hello"
   build:
     runs-on: ubuntu-latest
