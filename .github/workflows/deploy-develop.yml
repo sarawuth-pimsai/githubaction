@@ -6,9 +6,14 @@ on:
 jobs:
   check-out-github:
     runs-on: ubuntu-latest
+    outputs:
+      output1: ${{ steps.check-out-github.outputs.test }}
+      output2: ${{ steps.check-out-github.outputs.test }}
     steps:
       - name: Check out github
+        id: check-out-github
         uses: actions/checkout@v2
+        run: echo "::set-output name=test::hello"
   build:
     runs-on: ubuntu-latest
     needs: check-out-github
