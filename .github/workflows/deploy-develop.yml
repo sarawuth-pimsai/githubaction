@@ -1,11 +1,7 @@
 name: Deploy develop
 on:
   push:
-    types:
-      - closed
     branches:
-      - main
-      - develop
       - test/gitactionspr
 jobs:
   check-out-github:
