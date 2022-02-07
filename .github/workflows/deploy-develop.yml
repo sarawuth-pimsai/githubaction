@@ -21,4 +21,5 @@ jobs:
       - name: Hello
         run: echo ${{github.event.action}} ${{needs.check-out-github.outputs.output2}}
       - run: echo Github Actions Actors ${{github.actor}}
+      - run: echo Github Actions Event ${{github.event.push}}
     
