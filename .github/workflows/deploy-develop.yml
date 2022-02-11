@@ -2,7 +2,7 @@ name: Deploy develop
 on:
   push:
     branches:
-      - test/gitactionspr
+      - test/gitactionsprs
 jobs:
   check-out-github:
     runs-on: ubuntu-latest
