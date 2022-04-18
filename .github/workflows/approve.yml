@@ -1,0 +1,13 @@
+name: Approve
+on:
+  pull_request_review:
+    branches:
+      - feature/mergemain
+    types: [submitted]
+
+jobs:
+  Approve:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Approve Branch
+        run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."

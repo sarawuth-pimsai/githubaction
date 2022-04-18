@@ -1,0 +1,11 @@
+name: Clone Repo
+on:
+  push:
+    branches:
+      - test/gitactionspr
+jobs:
+  check-out-github:
+    runs-on: ubuntu-latest
+    - name: Check out devops
+      uses: actions/checkout@v2
+    # https://github.com/7-solutions/devops.git
